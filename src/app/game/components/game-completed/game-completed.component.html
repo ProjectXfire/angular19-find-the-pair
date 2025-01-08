@@ -1,0 +1,12 @@
+@if (endGame()) {
+<section class="container">
+  <div class="dialog">
+    <p class="dialog__title">You are completed the game</p>
+    <p class="dialog__starts">⭐⭐⭐⭐⭐</p>
+    <p class="dialog__time">
+      Your time was <span>{{ time() }}</span>
+    </p>
+    <p-button outlined label="Continue" (onClick)="startNewGame()" />
+  </div>
+</section>
+}

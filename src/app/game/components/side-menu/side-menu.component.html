@@ -1,0 +1,24 @@
+<div class="container">
+  <header class="header">
+    <p class="header__title">Find The Pair</p>
+    <button class="header__icon" type="button" name="side-menu" (click)="onCloseMenu()">
+      <i class="pi pi-times"></i>
+    </button>
+  </header>
+  <p-select
+    [options]="difficulties"
+    optionLabel="name"
+    placeholder="Select a difficulty"
+    [(ngModel)]="difficulty"
+  />
+  <div class="content">
+    <p-button
+      size="small"
+      [fluid]="true"
+      severity="contrast"
+      label="Start new game"
+      (onClick)="onStartNewGame()"
+    />
+    <p-button size="small" [fluid]="true" label="Reset the game" (onClick)="onResetGame()" />
+  </div>
+</div>

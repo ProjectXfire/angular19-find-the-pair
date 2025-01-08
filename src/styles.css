@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "Itim";
+  src: url("/assets/fonts/Itim-Regular.ttf");
+}
+
+:root {
+  --white-color: #fff;
+  --white-color-opacity: rgb(255, 255, 255, 0.5);
+  --black-color: #000;
+  --black-color-opacity: rgba(0, 0, 0, 0.5);
+  --black-color-opacity-2: rgba(0, 0, 0, 0.7);
+  --blue-color-opacity: rgba(0, 0, 0, 0.5);
+  --blue-color: #1d4ed8;
+  --blue-color-2: #172554;
+  --blue-color-3: #1d3f8f;
+  --blue-color-4: #5a74ca;
+  --green-color: #2ec278;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Itim", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  font-family: inherit;
+}

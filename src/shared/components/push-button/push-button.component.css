@@ -1,0 +1,38 @@
+.push-button {
+  min-width: 50px;
+  height: 45px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.button {
+  height: 45px;
+  padding: 5px 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  outline: none;
+  border: 2px dashed var(--blue-color-4);
+  transform: translateY(-8px);
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: transform 100ms ease-in-out;
+  background-color: var(--blue-color-3);
+  color: var(--white-color);
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.base {
+  height: 45px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--blue-color-4);
+}
+
+.button:active {
+  transform: translateY(0px);
+}

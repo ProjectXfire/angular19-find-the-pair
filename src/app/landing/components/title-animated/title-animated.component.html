@@ -1,0 +1,14 @@
+<div class="header-title">
+  <div class="text">
+    @for (letter of titleArray; track $index; let i = $index) {
+    <span class="text__title" [ngStyle]="{ 'animation-delay': i * 0.1 + 's' }">{{ letter }}</span>
+    }
+  </div>
+  <div class="text">
+    @for (letter of subtitleArray; track $index; let i = $index) {
+    <span class="text__subtitle" [ngStyle]="{ 'animation-delay': i * 0.1 + 's' }">{{
+      letter
+    }}</span>
+    }
+  </div>
+</div>

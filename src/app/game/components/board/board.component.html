@@ -1,0 +1,52 @@
+<div class="container">
+  <header class="header">
+    <button
+      type="button"
+      name="side-menu"
+      class="header__pairs header__pairs--menu"
+      (click)="openSidebar()"
+    >
+      <i class="pi pi-bars"></i>
+    </button>
+    <div class="header__spacer"></div>
+    <div class="header__pairs">
+      <p>Pairs</p>
+      <p>{{ pairs() }}</p>
+    </div>
+    <div class="header__pairs">
+      <p>Found</p>
+      <p>{{ pairsFound() }}</p>
+    </div>
+    <app-timer />
+  </header>
+  <div class="content">
+    @if (isLoading()) {
+    <div class="content__loader">
+      <app-loader />
+      <p>Creating game...</p>
+    </div>
+    } @else { @if (characters().length === 0) {
+    <p class="content__empty">Starting playing a new game</p>
+    } @else {
+    <ul class="gameboard">
+      @for (item of characters(); track $index; let i = $index) {
+      <li
+        class="gameboard__item"
+        [ngStyle]="{ 'animation-delay': i * animationDelay + 'ms' }"
+        (click)="flippedCharacter(i)"
+      >
+        <div class="gameboard__item-container" [ngClass]="{ 'animate-flipped': item.isFlipped }">
+          <img
+            class="gameboard__item-front-image"
+            ngSrc="assets/images/thunder.jpg"
+            alt="back-image"
+            fill
+          />
+          <img class="gameboard__item-back-image" [ngSrc]="item.image" [alt]="item.name" fill />
+        </div>
+      </li>
+      }
+    </ul>
+    } }
+  </div>
+</div>

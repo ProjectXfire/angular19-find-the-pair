@@ -1,0 +1,9 @@
+.container {
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.timer {
+  font-size: 1.8rem;
+}
